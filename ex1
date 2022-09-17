@@ -1,0 +1,141 @@
+package sample3.java;
+
+public class Sample3Java 
+{   
+       public static void sample3java(int arr[],int first,int last,int key)
+{
+        
+        int mid=(first+last)/2;
+        while(first<=last){
+            if(arr[mid]<key){
+                first=mid+1;
+            }
+            else if(arr[mid]==key){
+                System.out.println("element is found at        index"+mid);
+                break;
+            }
+            else{
+                last=mid-1;
+            }
+            mid=(first+last)/2;
+        }
+        if(first>last){
+            System.out.println("element is not found");
+        }
+        
+    }
+    public static void main(String args[]){
+        int arr[]={10,20,30,40,50};
+        int key=30;
+        int last=arr.length-1;
+        sample3java(arr,0,last,key);
+    }
+    
+}
+
+
+
+
+
+package sample1.java;
+
+public class Sample1Java
+ {
+    public static void main(String[] args) 
+{
+  
+        int speed;
+        long days,seconds,dist;
+        speed=186000;
+        days=365;
+        seconds=days*24*60*60;
+        dist=speed*seconds;
+        System.out.println("light travels:"+dist+"miles");
+    }
+    
+}
+
+
+
+Import java.util.*;
+public class JavaExercises
+{
+public static void main(String[] args)
+{
+calculateSale();
+}
+
+static void calculateSale(){
+
+floatunitprice=0f;
+int quantity=0;
+float revenue=0f;
+floatdiscount_rate=0f, discount_amount=0f;
+Scanner sc=new Scanner(System.in); 
+System.out.print("Enter unit price:");
+unitprice=sc.nextFloat();
+System.out.print("Enter quantity:");
+quantity=sc.nextInt();
+if(quantity<100)
+revenue=unitprice*quantity;
+else if(quantity>=100 && quantity<=120)
+{
+discount_rate=(float)10/100;
+revenue=unitprice*quantity;
+discount_amount=revenue*discount_rate;
+revenue-=discount_amount;
+}
+
+else if(quantity>120)
+{
+discount_rate=(float)15/100;
+revenue=unitprice*quantity;
+discount_amount=revenue*discount_rate;
+revenue-=discount_amount;
+}
+System.out.println("The revenue from sale:"+revenue+"$");
+System.out.println("Afterdiscount:"+discount_amount+"$("+discount_rate*100+"%)");
+ }
+ 
+ 
+ 
+ package sample4.java;
+
+public class Sample4Java
+ {
+public static void main(String[] args)
+ {
+        int result=0;
+        for(int i=100;i<=200;i++){
+            if(i%8==0)
+             result+=i;
+        }
+        System.out.println("output of the program"+result);
+    }
+    
+    
+    
+    
+    
+    import java.util.Scanner;
+
+public class Sample2Java
+ {
+
+        public static void main(String[] args) 
+{
+         Scanner obj=new Scanner(System.in);
+         System.out.println("how many rows");
+         int rows=obj.nextInt();
+         System.out.println("here is your pattern");
+         for(int i=rows;i>=1;i--)
+ { 
+   for(int j=rows;j>=i;j--)
+{
+  System.out.print(j+" ");
+}  
+   System.out.println();
+ }
+    
+ }
+}
